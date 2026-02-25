@@ -1,0 +1,188 @@
+# ============================================================
+# NewsXpress — Root .gitignore
+# Covers: Node.js, React/Vite, Python/Flask, ML, OS & editors
+# ============================================================
+# Large documentation files
+Docs/*.docx
+Docs/*.pdf
+Docs/*.xmind
+Figma\ Design\ files/
+
+# ─────────────────────────────────────────
+# 🔐 SECRETS & CREDENTIALS (NEVER commit these)
+# ─────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# Google Cloud service account keys
+*.json
+!package.json
+!package-lock.json
+!eslint.config.json
+
+# Firebase service account keys (explicit, in case above rule is adjusted)
+firebase-service-account-key.json
+google-credentials.json
+gc-service-account-key.json
+*-service-account*.json
+*credentials*.json
+serviceAccount*.json
+
+
+# ─────────────────────────────────────────
+# 📦 NODE.JS / NPM
+# ─────────────────────────────────────────
+node_modules/
+bower_components/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnp.*
+.yarn/
+
+
+# ─────────────────────────────────────────
+# 🏗️ BUILD OUTPUT
+# ─────────────────────────────────────────
+dist/
+build/
+dist-ssr/
+.next/
+out/
+.output/
+.nuxt/
+.cache/
+.tmp/
+temp/
+
+
+# ─────────────────────────────────────────
+# 🐍 PYTHON / ML ENGINE
+# ─────────────────────────────────────────
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+backend/Ml_model/venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+*.tar.gz
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# ML model artifacts & trained data (auto-generated, large files)
+backend/Ml_model/models/
+backend/Ml_model/data/
+backend/Ml_model/activity_logs.jsonl
+
+# Python testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.coveragerc
+
+# MyPy type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ML scheduler log
+ml_scheduler.log
+
+
+# ─────────────────────────────────────────
+# 🧪 TESTING & COVERAGE
+# ─────────────────────────────────────────
+coverage/
+*.lcov
+.nyc_output/
+jest-test-results.json
+test-results/
+playwright-report/
+.early.coverage/
+
+
+# ─────────────────────────────────────────
+# 🖥️ OS GENERATED FILES
+# ─────────────────────────────────────────
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+
+# ─────────────────────────────────────────
+# 🛠️ EDITORS & IDEs
+# ─────────────────────────────────────────
+
+# VS Code (keep shared workspace settings if desired)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Emacs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+\#*\#
+.#*
+
+
+# ─────────────────────────────────────────
+# 📦 MISC
+# ─────────────────────────────────────────
+*.tgz
+*.gz
+*.zip
+*.7z
+*.rar
+
+# Render / deployment
+.renderignore
