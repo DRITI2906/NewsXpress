@@ -177,7 +177,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/JeetGupta2506/NewsXpress.git
+git clone https://github.com/DRITI2906/NewsXpress.git
 cd NewsXpress
 ```
 

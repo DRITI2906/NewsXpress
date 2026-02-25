@@ -58,7 +58,7 @@ git --version
 ## 2. Clone the Repository
 
 ```bash
-git clone https://github.com/Dhruvil05Patel/NewsXpress.git
+git clone https://github.com/DRITI2906/NewsXpress.git
 cd NewsXpress
 ```
 

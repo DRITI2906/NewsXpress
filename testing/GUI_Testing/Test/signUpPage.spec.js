@@ -2,25 +2,25 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('SignUpPage', function() {
+describe('SignUpPage', function () {
   this.timeout(30000)
   let driver
   let vars
-  beforeEach(async function() {
+  beforeEach(async function () {
     driver = await new Builder().forBrowser('chrome').build()
     vars = {}
   })
-  afterEach(async function() {
+  afterEach(async function () {
     await driver.quit();
   })
-  it('SignUpPage', async function() {
+  it('SignUpPage', async function () {
     await driver.get("https://newsxpress-7bjk.onrender.com/all")
     await driver.manage().window().setRect({ width: 1536, height: 816 })
     await driver.findElement(By.css(".hidden > .lucide")).click()
     await driver.findElement(By.css(".hidden > .overflow-y-auto .w-full")).click()
     await driver.findElement(By.linkText("Sign up")).click()
     await driver.findElement(By.css("input:nth-child(2)")).click()
-    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("Tirth Gandhi")
+    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("Test User")
     await driver.findElement(By.css("input:nth-child(4)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).sendKeys("gt99")
     await driver.findElement(By.css("input:nth-child(7)")).click()
@@ -33,7 +33,7 @@ describe('SignUpPage', function() {
     await driver.findElement(By.css("input:nth-child(7)")).sendKeys("2005-09-09")
     await driver.findElement(By.css("form")).click()
     await driver.findElement(By.css("input:nth-child(9)")).click()
-    await driver.findElement(By.css("input:nth-child(9)")).sendKeys("gandhitirth604@gmail.com")
+    await driver.findElement(By.css("input:nth-child(9)")).sendKeys("testuser@example.com")
     await driver.findElement(By.css("input:nth-child(11)")).click()
     await driver.findElement(By.css("input:nth-child(11)")).sendKeys("Tng@2005")
     await driver.findElement(By.css("input:nth-child(14)")).click()

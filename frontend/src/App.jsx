@@ -18,7 +18,7 @@ import Bookmarks from "./components/Bookmarks";
 import PersonalizedFeed from "./components/PersonalizedFeed";
 import HelpSupport from "./components/HelpSupport";
 import LiveFeed from "./components/LiveFeed";
-import Developers from "./components/Developers";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import notify from "./utils/toast";
@@ -393,7 +393,7 @@ function AppContent() {
               )
             }
           />
-          <Route path="/developers" element={<Developers />} />
+
           <Route
             path="/bookmarks"
             element={

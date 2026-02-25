@@ -2,24 +2,24 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('LoginPage', function() {
+describe('LoginPage', function () {
   this.timeout(30000)
   let driver
   let vars
-  beforeEach(async function() {
+  beforeEach(async function () {
     driver = await new Builder().forBrowser('chrome').build()
     vars = {}
   })
-  afterEach(async function() {
+  afterEach(async function () {
     await driver.quit();
   })
-  it('LoginPage', async function() {
+  it('LoginPage', async function () {
     await driver.get("https://newsxpress-7bjk.onrender.com/all")
     await driver.manage().window().setRect({ width: 1536, height: 816 })
     await driver.findElement(By.css(".hidden > .lucide")).click()
     await driver.findElement(By.css(".hidden > .overflow-y-auto .w-full")).click()
     await driver.findElement(By.css("input:nth-child(2)")).click()
-    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("gtpbnm99@gmail.com")
+    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("testuser@example.com")
     await driver.findElement(By.css("input:nth-child(4)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).sendKeys("Ttjbdkjsbjh")
     await driver.findElement(By.id("showPassLogin")).click()
@@ -34,7 +34,7 @@ describe('LoginPage', function() {
     await driver.findElement(By.css("input:nth-child(4)")).click()
     {
       const element = await driver.findElement(By.css("input:nth-child(4)"))
-      await driver.actions({ bridge: true}).doubleClick(element).perform()
+      await driver.actions({ bridge: true }).doubleClick(element).perform()
     }
     await driver.findElement(By.css("input:nth-child(4)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).sendKeys("Tt@123456789")

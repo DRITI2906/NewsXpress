@@ -2,15 +2,15 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('Initial_Gui_Testing', function() {
+describe('Initial_Gui_Testing', function () {
   this.timeout(30000)
   let driver
   let vars
-  beforeEach(async function() {
+  beforeEach(async function () {
     driver = await new Builder().forBrowser('chrome').build()
     vars = {}
   })
-  afterEach(async function() {
+  afterEach(async function () {
     await driver.quit();
   })
   async function waitForWindow(timeout = 2) {
@@ -22,7 +22,7 @@ describe('Initial_Gui_Testing', function() {
     }
     throw new Error("New window did not appear before timeout")
   }
-  it('Initial_Gui_Testing', async function() {
+  it('Initial_Gui_Testing', async function () {
     // Test name: Initial_Gui_Testing
     // Step # | name | target | value
     // 1 | open | /all | 
@@ -134,12 +134,12 @@ describe('Initial_Gui_Testing', function() {
     await driver.findElement(By.css(".absolute > .lucide")).click()
     // 38 | click | css=input:nth-child(2) | 
     await driver.findElement(By.css(".lg\\3Ainline-flex")).click()
-    // 39 | type | css=input:nth-child(2) | gtpbnm99@gmail.com
+    // 39 | type | css=input:nth-child(2) | testuser@example.com
     await driver.findElement(By.css(".hidden > .p-4 > .w-full")).click()
     // 40 | click | css=input:nth-child(4) | 
     await driver.findElement(By.css("input:nth-child(2)")).click()
     // 41 | type | css=input:nth-child(4) | Tt@123456789
-    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("gtpbnm99@gmail.com")
+    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("testuser@example.com")
     // 42 | click | id=showPassLogin | 
     await driver.findElement(By.css("input:nth-child(4)")).click()
     // 43 | click | css=input:nth-child(4) | 
@@ -166,12 +166,12 @@ describe('Initial_Gui_Testing', function() {
     await driver.findElement(By.css("input:nth-child(4)")).click()
     // 54 | click | css=input:nth-child(2) | 
     await driver.findElement(By.css("input:nth-child(2)")).click()
-    // 55 | type | css=input:nth-child(2) | gtpbnm99@gmail.com
+    // 55 | type | css=input:nth-child(2) | testuser@example.com
     await driver.findElement(By.linkText("Login")).click()
     // 56 | click | css=input:nth-child(4) | 
     await driver.findElement(By.css("input:nth-child(2)")).click()
     // 57 | type | css=input:nth-child(4) | Tt123456789
-    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("gtpbnm99@gmail.com")
+    await driver.findElement(By.css("input:nth-child(2)")).sendKeys("testuser@example.com")
     // 58 | click | id=showPassLogin | 
     await driver.findElement(By.css("input:nth-child(4)")).click()
     // 59 | click | css=input:nth-child(4) | 
